@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>comprovantes</title>
+</head>
+
+<style>
+    body{
+        background-color:#716e6e;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+  
+    input[type="text"] {
+        padding: 8px;
+        width: 250px;
+        font-size: 16px;
+    }
+    
+</style>
+<body>
+    
+ <a href="./home2.html">
+        <img class="img" src="./imagens/arrow.png" alt="Seta para voltar" height="40" width="40">
+      </a>
+      <img src="./imagens/menu.png" alt="icone de menu" height="40" width="40">
+
+    <title>Painel de Postagens Pendentes</title>
+   
+</head>
+<body>
+    
+    <H2>Pesquise pelos projetos/donatários:</H2>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Buscar..." onkeyup="searchTable()">
+    </div>
+    
+    <div class="container">
+
+        <div>
+            <table id="postsTable">
+                <thead>
+                    <tr>
+                        
+                        <th>Nome</th>
+                        <th>Postagem</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                        <td>Cassio</td>
+                        <td>pendente</td>
+                        <td>(27)996107070</td>
+                    </tr>
+                    <tr>
+                        
+                        <td>Mariana</td>
+                        <td>Enviado</td>
+                        <td>(27)990987070</td>
+                    </tr>
+                    <tr>
+                       
+                        <td>Mayra</td>
+                        <td>pendente</td>
+                        <td>(27)998907070</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="downloads">
+            <h3>Comprovantes para Download</h3>
+            <a href="./comprovantes/comprovante Cassio.pdf" download="comprovante Cassio">Cassio(PDF)</a>
+            <a href="./comprovantes/comprovante Mariana.pdf" download="comprovante Mariana">Mariana(PDF)</a>
+            <a href="./comprovantes/comprovante Mayra.pdf" download="comprovante Mayra">Mayra(PDF)</a>
+        </div>
+    </div>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("postsTable");
+            tr = table.getElementsByTagName("tr");
+            
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none"; 
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COMPROVANTES</title>
+</head>
+<style>
+    body{
+        background-color:#716e6e;
+    }
+</style>
+
+<body>
+
+    <a href="./home1.html">
+        <img class="img" src="./imagens/arrow.png" alt="Seta para voltar" height="40" width="40">
+      </a>
+      <img src="imagens/menu.png" alt="icone de menu" height="40" width="40">
+    
+    <div>
+        <h2>Enviar recibo de pagamento</h2>
+        <h3>conta:</h3>
+        <p>0000000</p>
+        <form >
+            <div class="form-group">
+                <label for="metodo-pagamento"><h3>Método de Pagamento:</h3></label>
+                <select id="metodo-pagamento" name="metodo-pagamento" required>
+                    <option value="boleto">Boleto</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="transferencia">Transferência Bancária</option>
+                    <option value="pix">PIX</option>
+                </select>
+                <br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="data-pagamento"><h3>Data de Pagamento:</h3></label>
+                <input type="date" id="data-pagamento" name="data-pagamento" required>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for="valor"><h3>Valor:</h3></label>
+                <input type="number" id="valor" name="valor" step="0.01" required>
+            </div>
+             <br><br>
+            <div class="form-group">
+                <label for="observacao"><h3>Observação:</h3></label>
+                <textarea id="observacao" name="observacao" rows="4"></textarea>
+            </div>
+              <br><br>
+            <div class="form-group">
+                <label for="arquivo">Anexar Comprovante (Arquivo PDF, PNG, JPG):</label>
+                <input type="file" id="arquivo" name="arquivo" accept=".pdf,.png,.jpg,.jpeg" required>
+            </div>
+             <br><br>
+            <button type="submit">Enviar Comprovante</button>
+        </form>
+    </div>
+
+</body>
+</html>

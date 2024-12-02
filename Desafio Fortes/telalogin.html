@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image: url('./imagens/image\ 12.png'); 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.botaogod {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 'background-color 0,5s ease', 'color 0,5s ease', 'transform 0,5s ease';
+  }
+
+  .botao:hover {
+    background-color: #F8F0A7;
+    color: #F8F0A7 ;
+    transition: 'scale(1.2) ';
+  }
+
+</style>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+            <h2>Entrar</h2>
+            <center>
+            <a href="./home1.html" class="botaogod">Parceiros</a>
+            <a href="./home2.html" class="botaogod">Funcionário</a>
+            </center>
+            
+            <br>
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="login-btn">Entrar</button>
+            <div class="signup-link">
+                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

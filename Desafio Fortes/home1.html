@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME</title>
+</head>
+<style>
+
+    body{
+    margin: 0;
+    height: 100vh;
+    background-image: url('./imagens/image\ 12.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+</style>
+
+<body>
+    
+        <img src="./imagens/profile-user (2).png" alt="icone de perfil" id="minha-imagem" height="40" width="40" style="cursor: pointer;padding: 1px;">
+        <img src="./imagens/menu.png" alt="icone de menu" height="40" width="40">
+
+    <div class="minha-div, perfil" id="minha-div">
+        <br>
+        <img src="./imagens/profile-user (1).png" alt="icone de perfil"  height="36" width="36"><p>olá, Empresa!</p>
+        <br>
+    <a href="./meusprojetos.html">Meus Projetos</a>
+        <br><br>
+    <a href="./comprovantes.html">Comprovantes</a>
+        <br><br>
+        <button onclick="fecharDiv()">Fechar</button>
+    </div>
+
+    <script>
+        // Função para abrir a div
+        document.getElementById('minha-imagem').onclick = function() {
+            document.getElementById('minha-div').style.display = 'block';
+        }
+
+        // Função para fechar a div
+        function fecharDiv() {
+            document.getElementById('minha-div').style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>
